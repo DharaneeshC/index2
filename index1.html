@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark text-bg-secondary">
+    <div class="container-fluid mt-3 mb-4">
+        <a class="navbar-brand" >
+            <img src="data:image/png;base64,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" alt="Logo" style="width:60px;" class="rounded-pill"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/dharaneesh/OneDrive/Documents/23ADR030%20C%20Dharaneesh/Railway%20%20Ticket%20Booking.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Service</a></li>
+              <li><a class="dropdown-item">Link your Aadhaar</a></li>
+              <li><a class="dropdown-item">Ticket cancellation</a></li>
+              <li><a class="dropdown-item">Tourist booking</a></li>
+              <li><a class="dropdown-item">PNR Enquiry</a></li>
+              <li><a class="dropdown-item">Foreign tourist booking</a></li>
+            </ul>
+          </li>
+        </ul>
+      <form  class="d-flex">
+          <input class="form-control " type="text" placeholder="Search">
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+   <div class="text-center mb-5 mt-5">
+    <h1  class="text-important">Railway Ticket Booking</h1>
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBCu_tMFhfWzR4C175SF4ULGfknOSViT4QJQ&usqp=CAU" class="mx-auto d-block" class="img-thumbnail" alt="Not found" width="500px" height="200px">
+    </div>
+                <form action="/action_page.php" class="was-validated">
+                <div class="mb-3 mt-5">
+                  <label class="form-label">Username:</label>
+                  <input type="text" class="form-control"  placeholder="Enter username" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Password:</label>
+                  <input type="password" class="form-control" placeholder="Enter password" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" required>
+                  <label class="form-check-label" >Confirm</label>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+              </form>
+              <div class="d-grid">
+                
+              <a href="file:///C:/Users/dharaneesh/OneDrive/Documents/Bootstrapp%20Website/New%20folder/index2.html" type="button" class="btn btn-primary">Log in</a>
+              
+              </div>
+              
